@@ -10,9 +10,10 @@
 	<h:form id="formLogin">
 		<h:panelGrid border="1" columns="1">
 			<h:outputLabel styleClass="colorText" value="Usuario:"></h:outputLabel>
-			<h:inputText id="inputUsuario" value="#{loginMBean.usuario}" required="true" requiredMessage="Ingrese usuario"></h:inputText>
+			<h:inputText id="inputUsuario" value="#{loginMBean.usuario}" required="true" requiredMessage="Ingrese usuario" autocomplete="off"></h:inputText>
 			<h:outputLabel styleClass="colorText" value="Contraseña:"></h:outputLabel>
-			<h:inputSecret id="inputContraseña" value="#{loginMBean.contraseña}" required="true" requiredMessage="Ingrese contraseña"></h:inputSecret>		
+			<h:inputSecret id="inputContraseña" value="#{loginMBean.contraseña}" required="true" requiredMessage="Ingrese contraseña" autocomplete="off"></h:inputSecret>		
+			
 			<h:commandButton value="Ingresar" action="#{loginMBean.ingresar}"></h:commandButton>
 		</h:panelGrid>
 	</h:form>
