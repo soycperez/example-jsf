@@ -3,10 +3,19 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
 </h:head>
 
 <h:body>
-	<h:outputLabel value="Hola mundo con JSF"></h:outputLabel>
+	<h:form id="formLogin">
+		<h:panelGrid border="1" columns="1">
+			<h:outputLabel styleClass="colorText" value="Usuario:"></h:outputLabel>
+			<h:inputText id="inputUsuario" value="#{loginMBean.usuario}" required="true" requiredMessage="Ingrese usuario"></h:inputText>
+			<h:outputLabel styleClass="colorText" value="Contraseña:"></h:outputLabel>
+			<h:inputSecret id="inputContraseña" value="#{loginMBean.contraseña}" required="true" requiredMessage="Ingrese contraseña"></h:inputSecret>		
+			<h:commandButton value="Ingresar" action="#{loginMBean.ingresar}"></h:commandButton>
+		</h:panelGrid>
+	</h:form>
 </h:body>
 
 </html>
